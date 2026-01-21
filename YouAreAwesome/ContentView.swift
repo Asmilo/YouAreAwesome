@@ -31,14 +31,8 @@ struct ContentView: View {
                 let image1 = "hand.thumbsup"
                 let image2 = "sun.max.fill"
                 
-                if exampleText == "You are Awesome !" {
-                    exampleText = message2
-                    exampleImage = image2
-                } else {
-                    exampleText = message1
-                    exampleImage = image1
-                }
-                
+                exampleText = (exampleText == message1 ? message2 : message1)
+                exampleImage = (exampleImage == image1 ? image2 : image1)
                 
             }
             .buttonStyle(.glassProminent)
